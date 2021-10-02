@@ -7,7 +7,7 @@ import Logout from './global/pages/Logout';
 function App() {
     const [isLogin, setIsLogin] = useRecoilState(loginState);
 
-    if (isLogin) {
+    if (!isLogin) {
         return <Login />;
     }
     return <Logout />;
